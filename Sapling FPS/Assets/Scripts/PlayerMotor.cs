@@ -34,6 +34,7 @@ public class PlayerMotor : MonoBehaviour
         if (controller.isGrounded)
         {
             moveDirection = new Vector3(moveX, 0, moveZ);
+            moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= moveSpeed;
 
             Sprint(moveZ);
