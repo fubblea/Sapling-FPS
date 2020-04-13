@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerMotor : MonoBehaviour
 {
 
-    [SerializeField] float moveSpeed = 4;
     [SerializeField] float gravity = 6;
+    [SerializeField] float walkSpeed = 4;
+    [SerializeField] float sprintSpeed = 6;
 
+    float moveSpeed;
     Vector3 moveDirection;
     
     CharacterController controller;
@@ -32,6 +34,15 @@ public class PlayerMotor : MonoBehaviour
         {
             moveDirection = new Vector3(moveX, 0, moveZ);
             moveDirection *= moveSpeed;
+
+            if (Input.GetKey(KeyCode.LeftShift) && moveZ == 1)
+            {
+                moveSpeed = sprintSpeed;
+            }
+            else
+            {
+                moveSpeed = walkSpeed;
+            }
         }
 
         moveDirection.y -= gravity;
