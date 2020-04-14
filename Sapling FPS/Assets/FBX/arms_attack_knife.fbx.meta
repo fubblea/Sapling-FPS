@@ -37,7 +37,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -98,42 +98,42 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: upperArm_l
       parentName: rootBone
-      position: {x: -0.0002, y: 0, z: 0}
+      position: {x: -0.000040000003, y: 0, z: 0}
       rotation: {x: 0.9952408, y: -0.022579396, z: 0.022579188, w: 0.092065744}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: lowerArm_l
       parentName: upperArm_l
-      position: {x: -0, y: 0.00028999997, z: -1.4210854e-18}
+      position: {x: -0, y: 0.000057999998, z: -2.8421711e-19}
       rotation: {x: -4.440888e-15, y: -6.3948846e-14, z: 2.079081e-21, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hand_l
       parentName: lowerArm_l
-      position: {x: 2.220446e-20, y: 0.00022000003, z: -4.263256e-18}
+      position: {x: 4.4408924e-21, y: 0.00004400001, z: -8.526513e-19}
       rotation: {x: -1.1546314e-14, y: -7.1054265e-15, z: 3.924413e-21, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hand_l_end
       parentName: hand_l
-      position: {x: -0, y: 0.00006999998, z: 0}
+      position: {x: -0, y: 0.000013999997, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: upperArm_r
       parentName: rootBone
-      position: {x: 0.0002, y: 0, z: 0}
+      position: {x: 0.000040000003, y: 0, z: 0}
       rotation: {x: 0.9952408, y: 0.02257936, z: -0.022579575, w: 0.09206575}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: lowerArm_r
       parentName: upperArm_r
-      position: {x: -0, y: 0.00028999997, z: -1.4210854e-18}
+      position: {x: -0, y: 0.000057999998, z: -2.8421711e-19}
       rotation: {x: -4.440888e-15, y: -6.3948846e-14, z: 2.079081e-21, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hand_r
       parentName: lowerArm_r
-      position: {x: -0, y: 0.00022000003, z: -4.263256e-18}
+      position: {x: -0, y: 0.00004400001, z: -8.526513e-19}
       rotation: {x: -1.1546314e-14, y: -7.1054265e-15, z: 3.924413e-21, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: hand_r_end
       parentName: hand_r
-      position: {x: -0, y: 0.00006999998, z: 0}
+      position: {x: -0, y: 0.000013999997, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
@@ -143,7 +143,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.01
+    globalScale: 0.002
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 1
