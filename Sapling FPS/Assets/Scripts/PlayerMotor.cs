@@ -15,15 +15,26 @@ public class PlayerMotor : MonoBehaviour
     Vector3 moveDirection;
     
     CharacterController controller;
+    Animator anim;
 
     private void Start()
     {
         controller = GetComponent<CharacterController>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         Move();
+        Attack();
+    }
+
+    private void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            anim.SetTrigger("attackTrigger");
+        }
     }
 
     private void Move()
@@ -37,6 +48,7 @@ public class PlayerMotor : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= moveSpeed;
 
+            WalkAnim(moveZ);
             Sprint(moveZ);
             Jump();
         }
@@ -45,11 +57,24 @@ public class PlayerMotor : MonoBehaviour
         controller.Move(moveDirection * Time.deltaTime);
     }
 
+    private void WalkAnim(float moveZ)
+    {
+        if (moveZ != 0 && !Input.GetKey(KeyCode.LeftShift))
+        {
+            anim.SetInteger("moveCondition", 1);
+        }
+        if (moveZ == 0)
+        {
+            anim.SetInteger("moveCondition", 0);
+        }
+    }
+
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             moveDirection.y += jumpSpeed;
+            anim.SetTrigger("jumpTrigger");
         }
     }
 
@@ -58,6 +83,7 @@ public class PlayerMotor : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift) && moveZ == 1)
         {
             moveSpeed = sprintSpeed;
+            anim.SetInteger("moveCondition", 2);
         }
         else
         {
